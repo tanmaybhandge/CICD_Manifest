@@ -18,7 +18,7 @@ spec:
         app: flaskdemo
     spec:
       containers:
-      - image: tanmayb/images:${DOCKERTAG}:${DOCKERTAG}
+      - image: tanmayb/images:${DOCKERTAG}
         name: flaskdemo
         resources: {}
 status: {}
