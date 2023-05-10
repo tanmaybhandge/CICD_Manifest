@@ -19,7 +19,7 @@ node {
                               pwd
                               cat deployment.yaml
                               pwd
-                              sed -i 's+tanmayb/images*+tanmayb/images:${DOCKERTAG}+g' deployment.yaml
+                              sed -i 's+tanmayb/images.*+tanmayb/images:${DOCKERTAG}+g' deployment.yaml
                               cat deployment.yaml
                               git add .
                               git commit -m 'Done by Jenkins Job changemanifest: ${env.BUILD_NUMBER}'
