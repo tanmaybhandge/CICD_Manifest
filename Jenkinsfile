@@ -17,14 +17,14 @@ node {
                         //sh "git switch master"
                         sh ''' 
                               pwd
-                              cd ./GitOps/Manifest
                               cat deployment.yaml
                               pwd
                               sed -i 's+tanmayb/images.*+tanmayb/images:${DOCKERTAG}+g' deployment.yaml
                               cat deployment.yaml
                               git add .
                               git commit -m 'Done by Jenkins Job changemanifest: ${env.BUILD_NUMBER}'
-                              git push https://${GIT_USERNAME}:${GIT_PASSWORD}@github.com/${GIT_USERNAME}/kubernetesmanifest.git HEAD:main
+                              git push https://${GIT_USERNAME}:${GIT_PASSWORD}@github.com/${GIT_USERNAME}/CICD_Manifest.git HEAD:main
+                              https://github.com/tanmaybhandge/CICD_Manifest.git
                            '''
       }
     }
