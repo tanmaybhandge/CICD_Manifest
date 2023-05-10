@@ -24,7 +24,6 @@ node {
                               git add .
                               git commit -m 'Done by Jenkins Job changemanifest: ${env.BUILD_NUMBER}'
                               git push https://${GIT_USERNAME}:${GIT_PASSWORD}@github.com/${GIT_USERNAME}/CICD_Manifest.git HEAD:main
-                              https://github.com/tanmaybhandge/CICD_Manifest.git
                            '''
       }
     }
